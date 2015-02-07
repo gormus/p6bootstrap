@@ -1,0 +1,37 @@
+{
+  "name": "p6bootstrap",
+  "version": "1.0.0",
+  "authors": [
+    "Osman Gormus <osman@project6.com>"
+  ],
+  "description": "Bootstrap sub-theme for Drupal 7.",
+  "main": [
+    "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss",
+    "bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+    "bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+    "bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+    "bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+    "bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+    "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"
+  ],
+  "keywords": [
+    "twbs",
+    "bootstrap",
+    "saas",
+    "project6",
+    "stanford"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/twbs/bootstrap-sass",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.3"
+  }
+}

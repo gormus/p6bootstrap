@@ -1,0 +1,34 @@
+{
+  "name": "p6bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap sub-theme for Drupal 7.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gormus/p6bootstrap"
+  },
+  "keywords": [
+    "twbs",
+    "bootstrap",
+    "saas",
+    "project6"
+  ],
+  "author": "Osman Gormus <osman@project6.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gormus/p6bootstrap/issues"
+  },
+  "homepage": "https://github.com/gormus/p6bootstrap",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-sass": "^0.9.1",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
