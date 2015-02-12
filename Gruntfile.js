@@ -31,10 +31,20 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      vars: {
-        src: '<%= bootstrap.scss.vars %>',
-        dest: 'stylesheets/_bootstrap_variables.scss',
-        timestamp: true
+      firsttime: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['<%= vendor %>/bootstrap-sass/assets/fonts/bootstrap/*'],
+            dest: 'fonts/bootstrap/'
+          },
+          {
+            src: '<%= bootstrap.scss.vars %>',
+            dest: 'sass/_bootstrap_variables.scss',
+            timestamp: true
+          }
+        ]
       }
     },
 
@@ -45,11 +55,12 @@ module.exports = function(grunt) {
             '<%= vendor %>/bootstrap-sass/assets/stylesheets'
           ],
           precision: 8,
-          trace: false,
+          trace: true,
+          debugInfo: false,
           style: 'expanded' // nested, compact, compressed, expanded
         },
         files: {
-          'css/style.css': 'stylesheets/default.scss'
+          'css/style.css': 'sass/style.scss'
         }
       }
     },
@@ -100,7 +111,8 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9001,
-          base: './'
+          base: './../../../../',
+          open: 'http://0.0.0.0:9001/sites/all/themes/p6bootstrap/kitchen-sink.html'
         }
       }
     },
@@ -137,7 +149,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('setup', ['copy:vars']);
+  grunt.registerTask('firsttime', ['copy:firsttime']);
   grunt.registerTask('js', ['concat', 'uglify']);
   grunt.registerTask('build', ['sass', 'js']);
   grunt.registerTask('default', ['build', 'watch']);

@@ -4,10 +4,6 @@ core = 7.x
 base theme = bootstrap
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Regions
-;;;;;;;;;;;;;;;;;;;;;
-
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
@@ -20,26 +16,17 @@ regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Stylesheets
-;;;;;;;;;;;;;;;;;;;;;
-
 stylesheets[all][] = css/style.css
 
 
-; For information on choosing the desired method, please read the Drupal
-; Bootstrap sub-theme "how-to" documentation:
-; https://drupal.org/node/1978010
-
-; ;----------------------------------
-; ; METHOD 1: Bootstrap Source Files
-; ;----------------------------------
-;
-; ;;;;;;;;;;;;;;;;;;;;;
-; ;; Scripts
-; ;;;;;;;;;;;;;;;;;;;;;
-;
 scripts[] = js/script.js
-;
-; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+; scripts[] = js/script.min.js
+
+
+; Disable BootstrapCDN.
 settings[bootstrap_cdn] = ''
+
+settings[bootstrap_anchors_fix] = 0
+
+; Google Analytics tracking ID.
+settings[ga_tracking_id] = ''

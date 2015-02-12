@@ -2289,6 +2289,7 @@
 
 (function ($, Drupal, window, document, undefined) {
   // Avoid `console` errors in browsers that lack a console.
+  // https://github.com/h5bp/html5-boilerplate/blob/master/dist/js/plugins.js
   var method;
   var noop = function () {};
   var methods = [
@@ -2311,7 +2312,7 @@
 
 
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
-  Drupal.behaviors.StanfordBootstrap = {
+  Drupal.behaviors.p6bootstrap = {
     attach: function(context, settings) {
       // Check if it is front page.
       // @see stanford_bootstrap_preprocess_page() in template.php
@@ -2325,17 +2326,8 @@
 
 
 
+
       // Place your code here.
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2348,16 +2340,11 @@
     }
   };
 
+
   // Enable Bootstrap for tableDragChangedWarning.
   Drupal.theme.prototype.tableDragChangedWarning = function() {
-    return '<div class="tabledrag-changed-warning messages warning alert alert-warning">' +
-      Drupal.theme('tableDragChangedMarker') +
-      ' ' +
-      Drupal.t('Changes made in this table will not be saved until the form is submitted.') +
-      '</div>';
+    return '<div class="tabledrag-changed-warning messages warning alert alert-warning">' + Drupal.theme('tableDragChangedMarker') + ' ' + Drupal.t('Changes made in this table will not be saved until the form is submitted.') + '</div>';
   };
-
-
 })(jQuery, Drupal, this, this.document);
 
 //# sourceMappingURL=script.js.map
